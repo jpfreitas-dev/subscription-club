@@ -80,24 +80,24 @@ section.hero {
     }
 
     & img[src*="opened-spellbook"] {
-      width: 40px;
-      height: 40px;
+      width: 45px;
+      height: 45px;
       transform: rotate(15deg);
       top: 1.75rem;
       right: 4.625rem;
     }
 
     & img[src*="ouija-planchette"] {
-      width: 32px;
-      height: 32px;
+      width: 37px;
+      height: 37px;
       transform: rotate(-30deg);
       left: .875rem;
       bottom: 3.125rem;
     }
 
     & img[src*="crystal-ball"] {
-      width: 40px;
-      height: 40px;
+      width: 45px;
+      height: 45px;
       transform: rotate(15deg);
       right: 1.25rem;
       bottom: 2rem;
@@ -150,6 +150,8 @@ section.hero {
         width: 88px;
         height: 88px;
         --rotate-speelbook: rotate(21deg);
+        --rotate: var(--rotate-speelbook);
+        transform: var(--rotate);
         top: .75rem;
         left: 46%;
       }
@@ -158,6 +160,8 @@ section.hero {
         width: 80px;
         height: 80px;
         --rotate-planchette: rotate(99deg);
+        --rotate: var(--rotate-planchette);
+        transform: var(--rotate);
         left: 2.0625rem;
         bottom: 4.4375rem;
       }
@@ -166,6 +170,8 @@ section.hero {
         width: 72px;
         height: 72px;
         --rotate-crystal-ball: rotate(-15deg);
+        --rotate: var(--rotate-crystal-ball);
+        transform: var(--rotate);
         right: 2px;
         bottom: 4.75rem;
       }
@@ -173,55 +179,31 @@ section.hero {
   }
 }
 
-@media (width >= 64rem) {
+@media (width >=64rem) {
   section.hero {
     & header {
       padding: 3.5rem 10rem 470px;
     }
 
-    & > div {
-      /* Estilo base das linhas de texto */
+    &>div {
       & span.hero-line {
         opacity: 0.3;
-        transition: opacity 0.6s ease-in-out;
+        transition: opacity 0.6s 0s ease-in-out;
 
         & .highlight {
-          color: var(--blue-light);
+          color: inherit;
+          transition: color 0.6s 0s ease-in-out;
         }
       }
 
-      /* Estilo base das imagens (escondidas) */
       & img {
         opacity: 0;
         transform: scale(0) var(--rotate, rotate(0deg));
-        /* A transição aqui garante que o efeito reverta na saída */
-        transition: 
-          opacity 0.6s ease-in-out, 
-          transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        transition:
+          opacity 0.6s ease-in-out,
+          transform 0.6s 0s cubic-bezier(0.34, 1.56, 0.64, 1);
       }
 
-      /* Configuração das variáveis de rotação */
-      & img[src*="opened-spellbook"] {
-        --rotate: var(--rotate-speelbook);
-        transition-delay: 100ms; /* Delay aplicado na entrada e saída */
-      }
-
-      & img[src*="ouija-planchette"] {
-        --rotate: var(--rotate-planchette);
-        transition-delay: 800ms;
-      }
-
-      & img[src*="crystal-ball"] {
-        --rotate: var(--rotate-crystal-ball);
-        transition-delay: 1600ms;
-      }
-
-      /* Delays para as linhas de texto acompanharem as imagens */
-      & span.hero-line:nth-child(1) { transition-delay: 100ms; }
-      & span.hero-line:nth-child(2) { transition-delay: 800ms; }
-      & span.hero-line:nth-child(3) { transition-delay: 1600ms; }
-
-      /* Estado quando o mouse está em cima */
       &:hover {
         & img {
           opacity: 1;
@@ -230,6 +212,35 @@ section.hero {
 
         & .hero-line {
           opacity: 1;
+
+          & .highlight {
+            color: var(--blue-light);
+          }
+        }
+
+        & img[src*="opened-spellbook"],
+        & span.hero-line:nth-child(1),
+        & span.hero-line:nth-child(1) .highlight {
+          transition-delay: 100ms;
+        }
+
+        & img[src*="ouija-planchette"],
+        & span.hero-line:nth-child(2),
+        & span.hero-line:nth-child(2) .highlight {
+          transition-delay: 800ms;
+        }
+
+        & img[src*="crystal-ball"],
+        & span.hero-line:nth-child(3),
+        & span.hero-line:nth-child(3) .highlight {
+          transition-delay: 1600ms;
+        }
+
+        & img {
+            &:hover{
+              transform: scale(1.2) var(--rotate) rotate(15deg);
+              transition-delay: 0ms;
+            } 
         }
       }
     }
