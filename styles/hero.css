@@ -1,0 +1,243 @@
+section.hero {
+  background-color: var(--shape-background);
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+
+  & header {
+    background: url(../assets/background/magic-book-background.png) center/cover;
+    background-position-y: 0vw;
+    padding: 1.25rem 1.25rem 12.0625rem;
+
+    & nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & #logo {
+        height: 3rem;
+        width: 4.0625rem;
+        background: url(../assets/logo-symbol.svg) center/contain no-repeat;
+      }
+
+      & button {
+        background-color: var(--pink-dark);
+        border-radius: .5rem;
+        padding: .75rem 1.25rem;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        z-index: 1;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 150%;
+          aspect-ratio: 1/1;
+          background: radial-gradient(circle, var(--pink-base), var(--pink-base));
+          border-radius: 50%;
+          transform: translate(-50%, -50%) scale(0);
+          transition: transform .6s ease-out;
+          z-index: -1;
+        }
+
+        &:hover::after {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+
+    & .title {
+      margin-inline: auto;
+      max-width: 41rem;
+      margin-top: 3rem;
+      text-align: center;
+
+      & p {
+        font: var(--body-sm);
+        margin-top: 1rem;
+        max-width: 35.5rem;
+        margin-inline: auto;
+      }
+    }
+  }
+
+  &>div {
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 2rem;
+    padding: 5.0625rem 1.25rem;
+    position: relative;
+
+    & p {
+      font: var(--body-md);
+      text-align: center;
+    }
+
+    & img {
+      position: absolute;
+    }
+
+    & img[src*="opened-spellbook"] {
+      width: 40px;
+      height: 40px;
+      transform: rotate(15deg);
+      top: 1.75rem;
+      right: 4.625rem;
+    }
+
+    & img[src*="ouija-planchette"] {
+      width: 32px;
+      height: 32px;
+      transform: rotate(-30deg);
+      left: .875rem;
+      bottom: 3.125rem;
+    }
+
+    & img[src*="crystal-ball"] {
+      width: 40px;
+      height: 40px;
+      transform: rotate(15deg);
+      right: 1.25rem;
+      bottom: 2rem;
+    }
+  }
+}
+
+@media (width >=48rem) {
+  section.hero {
+    & header {
+      padding: 2rem 3rem 16.875rem;
+
+      & nav {
+        & #logo {
+          height: 3.625rem;
+          width: 14.375rem;
+          background: url(../assets/logo-horizontal.svg) center/contain;
+        }
+      }
+
+      & .title {
+        margin-top: 10.25rem;
+
+        & p {
+          font: var(--body-lg);
+          margin-top: 2rem;
+        }
+      }
+    }
+
+    &>div {
+      margin-top: 2rem;
+      padding: 7.125rem 2rem 9.875rem;
+      position: relative;
+
+      & p {
+        font: var(--subtitle);
+        text-align: center;
+
+        & span.highlight {
+          color: var(--blue-light);
+        }
+      }
+
+      & img {
+        position: absolute;
+      }
+
+      & img[src*="opened-spellbook"] {
+        width: 88px;
+        height: 88px;
+        --rotate-speelbook: rotate(21deg);
+        top: .75rem;
+        left: 46%;
+      }
+
+      & img[src*="ouija-planchette"] {
+        width: 80px;
+        height: 80px;
+        --rotate-planchette: rotate(99deg);
+        left: 2.0625rem;
+        bottom: 4.4375rem;
+      }
+
+      & img[src*="crystal-ball"] {
+        width: 72px;
+        height: 72px;
+        --rotate-crystal-ball: rotate(-15deg);
+        right: 2px;
+        bottom: 4.75rem;
+      }
+    }
+  }
+}
+
+@media (width >= 64rem) {
+  section.hero {
+    & header {
+      padding: 3.5rem 10rem 470px;
+    }
+
+    & > div {
+      /* Estilo base das linhas de texto */
+      & span.hero-line {
+        opacity: 0.3;
+        transition: opacity 0.6s ease-in-out;
+
+        & .highlight {
+          color: var(--blue-light);
+        }
+      }
+
+      /* Estilo base das imagens (escondidas) */
+      & img {
+        opacity: 0;
+        transform: scale(0) var(--rotate, rotate(0deg));
+        /* A transição aqui garante que o efeito reverta na saída */
+        transition: 
+          opacity 0.6s ease-in-out, 
+          transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      /* Configuração das variáveis de rotação */
+      & img[src*="opened-spellbook"] {
+        --rotate: var(--rotate-speelbook);
+        transition-delay: 100ms; /* Delay aplicado na entrada e saída */
+      }
+
+      & img[src*="ouija-planchette"] {
+        --rotate: var(--rotate-planchette);
+        transition-delay: 800ms;
+      }
+
+      & img[src*="crystal-ball"] {
+        --rotate: var(--rotate-crystal-ball);
+        transition-delay: 1600ms;
+      }
+
+      /* Delays para as linhas de texto acompanharem as imagens */
+      & span.hero-line:nth-child(1) { transition-delay: 100ms; }
+      & span.hero-line:nth-child(2) { transition-delay: 800ms; }
+      & span.hero-line:nth-child(3) { transition-delay: 1600ms; }
+
+      /* Estado quando o mouse está em cima */
+      &:hover {
+        & img {
+          opacity: 1;
+          transform: scale(1) var(--rotate);
+        }
+
+        & .hero-line {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

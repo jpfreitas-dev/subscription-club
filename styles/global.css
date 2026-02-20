@@ -30,20 +30,48 @@
   --text-label: #BAC6C9;
 
   /* Typography */
-  --title-lg: 700 3rem/auto "Raleway", sans-serif;
-  --title-md: 700 2.5rem/auto "Raleway", sans-serif;
-  --title-sm: 700 2rem/auto "Raleway", sans-serif;
-  --title-xs: 700 1rem/auto "Raleway", sans-serif;
-  --subtitle: 500 2rem/100% "Raleway", sans-serif;
+  --title-lg: 700 clamp(1.75rem, 1.3099rem + 1.8779vw, 3rem)/1 "Raleway", sans-serif;
+  --title-md: 700 2.5rem/1 "Raleway", sans-serif;
+  --title-sm: 700 2rem/1 "Raleway", sans-serif;
+  --title-xs: 700 1rem/1 "Raleway", sans-serif;
+  --subtitle: 500 2rem/200% "Raleway", sans-serif;
   --body-lg: 400 1.25rem/140% "Raleway", sans-serif;
   --body-lg-bold: 700 1.25rem/140% "Raleway", sans-serif;
-  --body-md: 400 1rem/140% "Raleway", sans-serif;
+  --body-md: 500 1rem/140% "Raleway", sans-serif;
   --body-md-bold: 700 1rem/140% "Raleway", sans-serif;
   --body-sm: 400 0.875rem/140% "Raleway", sans-serif;
   --body-sm-bold: 700 0.875rem/140% "Raleway", sans-serif;
   --body-xs: 400 0.75rem/140% "Raleway", sans-serif;
   --body-xs-bold: 700 0.75rem/140% "Raleway", sans-serif;
-  --button: 700 0.875rem/auto "Raleway", sans-serif;
-  --link: 500 0.875rem/auto "Raleway", sans-serif;
-  --tag: 700 0.625rem/auto "Raleway", sans-serif;
+  --button: 700 .9375rem/1 "Raleway", sans-serif;
+  --link: 500 0.875rem/1 "Raleway", sans-serif;
+  --tag: 700 0.625rem/1 "Raleway", sans-serif;
 }
+
+body {
+  color: var(--text-body);
+  background-color: var(--shape-background);
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+h1, h2, h3 {
+  color: var(--text-title);
+}
+
+h1 {
+  font: var(--title-lg);
+}
+
+button {
+  font: var(--button);
+  color: var(--text-title);
+  border: none;
+}
+
+@media (width >= 64rem) {
+  .mobile-only {
+    display: none;
+  }
+}
+
