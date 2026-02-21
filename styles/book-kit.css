@@ -1,0 +1,211 @@
+section.book-kit {
+  padding-block: 6.5rem 5.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & .title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    & img {
+      width: clamp(1.25rem, 0.9392rem + 1.326vw, 4rem);
+      filter: drop-shadow(0 0 .75rem #8F3B9E);
+    }
+
+  }
+
+  & p {
+    margin-top: .5rem;
+    font: var(--body-sm);
+  }
+
+  & .kit {
+    margin-top: 4rem;
+    width: 23.4375rem;
+    height: 19.9375rem;
+    position: relative;
+
+    & .kit-item {
+      position: absolute;
+      font: 400 .625rem/1 "Raleway", sans-serif;
+      z-index: 0;
+    }
+
+    & img[src*="example-book"] {
+      width: 9.8244rem;
+      position: absolute;
+      z-index: 1;
+      top: 3.3481rem;
+      right: 8.125rem;
+    }
+
+    & span:nth-child(2) {
+      left: .6538rem;
+      top: 1.5481rem;
+    }
+
+
+    & img[src*="arrow1"] {
+      width: 3.6713rem;
+      left: 2.5881rem;
+      top: 3.0056rem;
+    }
+
+    & span:nth-child(4) {
+      left: .695rem;
+      top: 9.6475rem;
+    }
+
+    & img[src*="arrow2"] {
+      width: 2.2056rem;
+      left: 1.6131rem;
+      top: 11.0944rem;
+    }
+
+    & img[src*="pin"] {
+      width: 4.855rem;
+      left: 2.7rem;
+      top: 12.5rem;
+    }
+
+    & img[src*="bookmark-yellow"] {
+      transform: rotate(12deg);
+      width: 3.65rem;
+      top: 1.75rem;
+      right: 5.625rem;
+    }
+
+    & img[src*="bookmark-purple"] {
+      transform: rotate(22deg);
+      width: 3.6181rem;
+      top: 4rem;
+      right: 48px;
+      z-index: -1;
+    }
+
+    & img[src*="arrow3"] {
+      width: 3.06rem;
+      right: 4.1rem;
+      bottom: 2rem;
+    }
+
+    & span:nth-child(10) {
+      right: 3.4rem;
+      bottom: 0.8rem;
+    }
+  }
+}
+
+@media (width >=64rem) {
+  section.book-kit {
+    & p {
+      font: var(--body-md);
+    }
+
+    & .kit {
+      margin-top: 5.5rem;
+      width: 64rem;
+      height: 57.5rem;
+      position: relative;
+
+      & .kit-item {
+        position: absolute;
+        font: var(--body-md);
+        z-index: 0;
+
+        opacity: 0;
+        scale: 0;
+        translate: var(--offset-x, 0px) var(--offset-y, 0px);
+        transition: opacity 0.5s ease, scale 0.5s ease, translate 0.8s cubic-bezier(0.34, 1.4, 0.64, 1);
+      }
+
+      &:hover .kit-item {
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+      }
+
+
+      & img[src*="example-book"] {
+        width: 29.1875rem;
+        position: absolute;
+        z-index: 1;
+        top: 8.375rem;
+        right: 290px;
+      }
+
+      & span:nth-child(2) {
+        left: 1.875rem;
+        top: 4.775rem;
+        --offset-x: 250px;
+        --offset-y: 120px;
+      }
+
+
+      & img[src*="arrow1"] {
+        width: 10.875rem;
+        left: 7.5rem;
+        top: 7.1875rem;
+        --offset-x: 180px;
+        --offset-y: 100px;
+      }
+
+      & span:nth-child(4) {
+        left: 5.0625rem;
+        top: 28.4375rem;
+        --offset-x: 220px;
+        --offset-y: -80px;
+      }
+
+      & img[src*="arrow2"] {
+        width: 6.5rem;
+        left: 5.6875rem;
+        top: 31.25rem;
+        --offset-x: 220px;
+        --offset-y: -120px;
+      }
+
+      & img[src*="pin"] {
+        width: 13.875rem;
+        left: 135px;
+        top: 36.25rem;
+        --offset-x: 180px;
+        --offset-y: -180px;
+      }
+
+      & img[src*="bookmark-yellow"] {
+        width: 10.75rem;
+        top: 3.95rem;
+        right: 15rem;
+        --offset-x: -60px;
+        --offset-y: 150px;
+      }
+
+      & img[src*="bookmark-purple"] {
+        width: 10.75rem;
+        top: 9.5rem;
+        right: 115px;
+        z-index: -1;
+        --offset-x: -200px;
+ 
+      }
+
+      & img[src*="arrow3"] {
+        width: 9.0625rem;
+        right: 170px;
+        bottom: 6rem;
+        --offset-x: -50px;
+        --offset-y: -200px;
+      }
+
+      & span:nth-child(10) {
+        right: 13rem;
+        bottom: 3.5rem;
+        --offset-x: -30px;
+        --offset-y: -220px;
+      }
+    }
+  }
+}

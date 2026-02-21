@@ -30,9 +30,9 @@
   --text-label: #BAC6C9;
 
   /* Typography */
-  --title-lg: 700 clamp(1.75rem, 1.3099rem + 1.8779vw, 3rem)/1 "Raleway", sans-serif;
+  --title-lg: 700 clamp(1.75rem, 1.232rem + 2.2099vw, 3rem)/1 "Raleway", sans-serif;
   --title-md: 700 2.5rem/1 "Raleway", sans-serif;
-  --title-sm: 700 2rem/1 "Raleway", sans-serif;
+  --title-sm: 700 clamp(1.5rem, 1.2928rem + 0.884vw, 2rem)/1 "Raleway", sans-serif;
   --title-xs: 700 1rem/1 "Raleway", sans-serif;
   --subtitle: 500 2rem/200% "Raleway", sans-serif;
   --body-lg: 400 1.25rem/140% "Raleway", sans-serif;
@@ -53,6 +53,8 @@ body {
   background-color: var(--shape-background);
   max-width: 1400px;
   margin-inline: auto;
+  overflow-x: hidden;
+
 }
 
 h1, h2, h3 {
@@ -61,6 +63,14 @@ h1, h2, h3 {
 
 h1 {
   font: var(--title-lg);
+}
+
+h2 {
+  font: var(--title-md);
+}
+
+h3 {
+  font: var(--title-sm);
 }
 
 button {

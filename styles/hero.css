@@ -5,8 +5,7 @@ section.hero {
 
   & header {
     background: url(../assets/background/magic-book-background.png) center/cover;
-    background-position-y: 0vw;
-    padding: 1.25rem 1.25rem 12.0625rem;
+    padding: 1.25rem 1.25rem 15rem;
 
     & nav {
       display: flex;
@@ -84,15 +83,15 @@ section.hero {
       height: 45px;
       transform: rotate(15deg);
       top: 1.75rem;
-      right: 4.625rem;
+      right: 6.625rem;
     }
 
     & img[src*="ouija-planchette"] {
       width: 37px;
       height: 37px;
       transform: rotate(-30deg);
-      left: .875rem;
-      bottom: 3.125rem;
+      left: 1.5rem;
+      bottom: 2.5rem;
     }
 
     & img[src*="crystal-ball"] {
@@ -162,7 +161,7 @@ section.hero {
         --rotate-planchette: rotate(99deg);
         --rotate: var(--rotate-planchette);
         transform: var(--rotate);
-        left: 2.0625rem;
+        left: 5%;
         bottom: 4.4375rem;
       }
 
@@ -172,7 +171,7 @@ section.hero {
         --rotate-crystal-ball: rotate(-15deg);
         --rotate: var(--rotate-crystal-ball);
         transform: var(--rotate);
-        right: 2px;
+        right: 5%;
         bottom: 4.75rem;
       }
     }
