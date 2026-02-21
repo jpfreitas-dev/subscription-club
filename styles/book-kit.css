@@ -22,10 +22,19 @@ section.book-kit {
   }
 
   & .kit {
-    margin-top: 4rem;
+    margin-block: 4rem 5.5rem;
     width: 23.4375rem;
     height: 19.9375rem;
     position: relative;
+
+    & .elipse-blur {
+      height: 100%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--pink-low);
+      filter: blur(100px);
+    }
 
     & .kit-item {
       position: absolute;
@@ -40,6 +49,7 @@ section.book-kit {
       top: 3.3481rem;
       right: 8.125rem;
     }
+
 
     & span:nth-child(2) {
       left: .6538rem;
@@ -98,14 +108,28 @@ section.book-kit {
   }
 }
 
-@media (width >=64rem) {
+@media (width >= 48rem) {
+  & section.book-kit {
+    & .kit {
+      margin-top: 10rem;
+      scale: 1.7;
+
+      & .elipse-blur {
+        filter: blur(150px);
+      }
+    }
+  }
+}
+
+@media (width >= 64rem) {
   section.book-kit {
     & p {
       font: var(--body-md);
     }
 
     & .kit {
-      margin-top: 5.5rem;
+      scale: 1;
+      margin-block: 5.5rem 18.125rem;
       width: 64rem;
       height: 57.5rem;
       position: relative;
@@ -125,6 +149,10 @@ section.book-kit {
         opacity: 1;
         scale: 1;
         translate: 0 0;
+      }
+
+      & .elipse-blur {
+        filter: blur(500px);
       }
 
 

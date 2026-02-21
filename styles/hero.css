@@ -62,7 +62,7 @@ section.hero {
     }
   }
 
-  &>div {
+  &>div:nth-child(2) {
     max-width: 1200px;
     margin-inline: auto;
     margin-top: 2rem;
@@ -102,7 +102,27 @@ section.hero {
       bottom: 2rem;
     }
   }
+
+  & .elipse-blur {
+    background-color: var(--pink-low);
+  }
+
+  & .elipse-blur:nth-child(3) {
+    width: 270px;
+    left: 0;
+    top: 503px;
+    filter: blur(200px);
+  }
+
+  & .elipse-blur:nth-child(4) {
+    width: 270px;
+    right: 0;
+    top: 503px;
+    filter: blur(200px);
+
+  }
 }
+
 
 @media (width >=48rem) {
   section.hero {
@@ -127,13 +147,13 @@ section.hero {
       }
     }
 
-    &>div {
+    &>div:nth-child(2) {
       margin-top: 2rem;
       padding: 7.125rem 2rem 9.875rem;
       position: relative;
 
       & p {
-        font: var(--subtitle);
+        font: var(--body-lg);
         text-align: center;
 
         & span.highlight {
@@ -175,6 +195,14 @@ section.hero {
         bottom: 4.75rem;
       }
     }
+
+    & .elipse-blur:nth-child(5) {
+      width: 500px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 500px;
+      filter: blur(300px);
+    }
   }
 }
 
@@ -184,14 +212,18 @@ section.hero {
       padding: 3.5rem 10rem 470px;
     }
 
-    &>div {
-      & span.hero-line {
-        opacity: 0.3;
-        transition: opacity 0.6s 0s ease-in-out;
+    &>div:nth-child(2) {
+      & p {
+        font: var(--subtitle);
 
-        & .highlight {
-          color: inherit;
-          transition: color 0.6s 0s ease-in-out;
+        & span.hero-line {
+          opacity: 0.3;
+          transition: opacity 0.6s 0s ease-in-out;
+
+          & .highlight {
+            color: inherit;
+            transition: color 0.6s 0s ease-in-out;
+          }
         }
       }
 
@@ -236,10 +268,10 @@ section.hero {
         }
 
         & img {
-            &:hover{
-              transform: scale(1.2) var(--rotate) rotate(15deg);
-              transition-delay: 0ms;
-            } 
+          &:hover {
+            transform: scale(1.2) var(--rotate) rotate(15deg);
+            transition-delay: 0ms;
+          }
         }
       }
     }

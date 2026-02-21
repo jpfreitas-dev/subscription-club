@@ -79,6 +79,14 @@ button {
   border: none;
 }
 
+.elipse-blur {
+  position: absolute;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  z-index: -2;
+
+}
+
 @media (width >= 64rem) {
   .mobile-only {
     display: none;
