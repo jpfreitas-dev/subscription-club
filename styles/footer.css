@@ -1,0 +1,87 @@
+footer {
+  padding: 6.125rem 2rem 2.375rem;
+  background: url(../assets/background/book-trace-background-mobile.png) top/cover;
+
+  & .links {
+    margin-inline: auto;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    & .brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .75rem;
+
+      &>img {
+        width: 9.875rem;
+      }
+
+      & .divider {
+        border: 1px solid var(--shape-stroke);
+        width: 100%;
+      }
+
+      & .social-media {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+
+        & img {
+          transition: filter 200ms ease;
+          cursor: pointer;
+
+          &:hover {
+            filter: brightness(0) saturate(100%) invert(48%) sepia(60%) saturate(500%) hue-rotate(165deg) brightness(95%) contrast(90%);
+          }
+        }
+      }
+    }
+
+    & > div:nth-child(2){
+      display: grid;
+      grid-auto-flow: column;
+      gap: 1.5rem;
+
+      & div {
+        & h4 {
+          margin-bottom: 1.25rem;
+        }
+
+        & a {
+          margin-bottom: .75rem;
+
+          &:hover {
+            color: var(--text-body);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 48rem) {
+  footer {
+    margin-top: 3rem;
+    padding: 7.125rem 5rem 2.375rem;
+    
+    & .links {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (width >= 64rem) {
+  footer {
+    padding: 7.125rem 15rem 6.375rem;
+    background: url(../assets/background/book-trace-background-desktop.png) top/cover;
+
+    & .links {
+      scale: 1.1;
+      max-width: 900px;
+    }
+  }
+}

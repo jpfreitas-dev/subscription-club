@@ -51,8 +51,6 @@
 body {
   color: var(--text-body);
   background-color: var(--shape-background);
-  max-width: 1400px;
-  margin-inline: auto;
   overflow-x: hidden;
 }
 
@@ -80,6 +78,13 @@ button {
   font: var(--button);
   color: var(--text-title);
   border: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue-light);
+  font: var(--link);
+  display: block;
 }
 
 .elipse-blur {

@@ -2,6 +2,8 @@ section.hero {
   background-color: var(--shape-background);
   opacity: 0;
   animation: fadeIn 2s ease-in-out forwards;
+  max-width: 1400px;
+  margin-inline: auto;
 
   & header {
     background: url(../assets/background/magic-book-background.png) center/cover;
@@ -128,6 +130,8 @@ section.hero {
   section.hero {
     & header {
       padding: 2rem 3rem 16.875rem;
+      max-width: 1400px;
+      margin-inline: auto;
 
       & nav {
         & #logo {
