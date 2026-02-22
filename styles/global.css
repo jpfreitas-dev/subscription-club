@@ -54,10 +54,9 @@ body {
   max-width: 1400px;
   margin-inline: auto;
   overflow-x: hidden;
-
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: var(--text-title);
 }
 
@@ -71,6 +70,10 @@ h2 {
 
 h3 {
   font: var(--title-sm);
+}
+
+h4 {
+  font: var(--title-xs);
 }
 
 button {

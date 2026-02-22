@@ -129,7 +129,7 @@ section.book-kit {
 
     & .kit {
       scale: 1;
-      margin-block: 5.5rem 18.125rem;
+      margin-block: 5.5rem 0;
       width: 64rem;
       height: 57.5rem;
       position: relative;
