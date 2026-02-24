@@ -99,7 +99,7 @@ section.pricing {
     }
 
     & .card.semi-annual {
-      outline: none;
+      outline: 1px solid var(--pink-dark);
       position: relative;
 
       & header h4 {
@@ -114,14 +114,11 @@ section.pricing {
         & button {
           background-color: var(--pink-dark);
 
-          transition: background-color 200ms linear;
-
           &:hover {
             background-color: var(--pink-base);
           }
         }
       }
-
 
       & .popular {
         position: absolute;
@@ -137,12 +134,11 @@ section.pricing {
     & .elipse-blur {
       position: absolute;
       height: 100%;
-      border: 1px solid red;
       left: 50%;
       top: 60%;
       transform: translate(-50%, -50%);
       background-color: var(--shape-base);
-      filter: blur(150px);
+      filter: blur(9.375rem);
     }
   }
 }
@@ -195,7 +191,6 @@ section.pricing {
       }
 
       & .card.semi-annual {
-        position: relative;
         z-index: 1;
 
         &::after {
@@ -206,7 +201,6 @@ section.pricing {
         }
       }
 
-      /* Hover scale only after cards are revealed */
       & .card:hover {
         background-color: var(--shape-hover);
       }
@@ -214,28 +208,3 @@ section.pricing {
   }
 }
 
-@keyframes reveal-left {
-  from {
-    opacity: 0;
-    scale: 0.8;
-    transform: rotate(-4deg) translateX(calc(17rem + 1.5rem));
-  }
-  to {
-    opacity: 1;
-    scale: 1;
-    transform: rotate(-4deg) translateX(0);
-  }
-}
-
-@keyframes reveal-right {
-  from {
-    opacity: 0;
-    scale: 0.8;
-    transform: rotate(4deg) translateX(calc(-17rem - 1.5rem));
-  }
-  to {
-    opacity: 1;
-    scale: 1;
-    transform: rotate(4deg) translateX(0);
-  }
-}

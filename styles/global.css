@@ -13,10 +13,8 @@
 
   /* Blue */
   --blue-light: #73B6D2;
-  --blue-base: #358BB9;
   --blue-mid: #2374A4;
   --blue-dark: #144A72;
-  --blue-low: #08233C;
 
   /* Shape */
   --shape-stroke: #002347;
@@ -27,7 +25,6 @@
   /* Text */
   --text-title: #F8FBFB;
   --text-body: #E2E7E9;
-  --text-label: #BAC6C9;
 
   /* Typography */
   --title-lg: 700 clamp(1.75rem, 1.232rem + 2.2099vw, 3rem)/1 "Raleway", sans-serif;
@@ -36,13 +33,9 @@
   --title-xs: 700 1rem/1 "Raleway", sans-serif;
   --subtitle: 500 2rem/200% "Raleway", sans-serif;
   --body-lg: 400 1.25rem/140% "Raleway", sans-serif;
-  --body-lg-bold: 700 1.25rem/140% "Raleway", sans-serif;
   --body-md: 500 1rem/140% "Raleway", sans-serif;
-  --body-md-bold: 700 1rem/140% "Raleway", sans-serif;
   --body-sm: 400 0.875rem/140% "Raleway", sans-serif;
-  --body-sm-bold: 700 0.875rem/140% "Raleway", sans-serif;
   --body-xs: 400 0.75rem/140% "Raleway", sans-serif;
-  --body-xs-bold: 700 0.75rem/140% "Raleway", sans-serif;
   --button: 700 .9375rem/1 "Raleway", sans-serif;
   --link: 500 0.875rem/1 "Raleway", sans-serif;
   --tag: 700 0.625rem/1 "Raleway", sans-serif;
