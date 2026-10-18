@@ -1,38 +1,24 @@
-# Encantos Literários - Clube de Assinatura
+# Encantos Literários — Clube de Assinatura
 
-Landing page responsiva de um clube de assinatura de livros, desenvolvida como projeto pessoal com foco em **animações CSS e interações visuais leves**.
+Landing page responsiva para um clube de assinatura de livros, criada para apresentar a proposta do serviço, o kit mensal e os planos disponíveis.
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+[Demo online](https://jpfreitas-dev.github.io/subscription-club/)
 
-## Sobre
+## Sobre o projeto
 
-Projeto criado durante o curso Fullstack da [Rocketseat](https://www.rocketseat.com.br/), focando em:
+O Encantos Literários é uma landing page estática com identidade visual inspirada em fantasia e literatura. O projeto foi desenvolvido para praticar estruturação semântica, responsividade, animações CSS e interações visuais leves no navegador.
 
-- Animações e transições CSS com suporte a interações JavaScript pontuais
-- CSS Nesting nativo
-- Layout responsivo mobile-first para mobile, tablet e desktop
-- Custom properties para design tokens
-- Acessibilidade básica para teclado e redução de movimento
+## Funcionalidades
 
-## Destaques de animação
-
-- **Hero:** texto e ícones aparecem em sequência ao hover
-- **Kit mensal:** itens revelados com efeito de escala e translate ao hover
-- **Pricing:** cards laterais deslizam com rotação ao passar o mouse no container
-- **Botão "Assinar":** efeito ripple com pseudo-elemento
-- **Rolagem:** seções aparecem suavemente conforme entram na tela
-- **Touch e teclado:** kit mensal e planos possuem estados alternativos para dispositivos sem hover
-- **Acessibilidade:** foco visível e suporte a `prefers-reduced-motion`
-
-## Funcionalidades visuais
-
-- Hero com composição temática e entrada animada.
-- Kit mensal com elementos explicativos e interação por hover, toque ou teclado.
-- Planos mensal, semestral e anual com destaque para o plano popular.
-- Cards de planos adaptados para navegação horizontal em telas pequenas.
-- Rodapé responsivo com links e redes sociais.
-- Rolagem suave entre o botão de assinatura e os planos.
+- Hero com apresentação do clube e chamada para ação.
+- Kit mensal com interação por hover, toque e teclado.
+- Planos mensal, semestral e anual.
+- Destaque visual para o plano recomendado.
+- Navegação suave até a seção de planos.
+- Animações de entrada das seções durante a rolagem.
+- Layout mobile-first para celular, tablet e desktop.
+- Estados de hover, foco e toque nos elementos interativos.
+- Suporte a `prefers-reduced-motion`.
 
 ## Demonstração
 
@@ -44,14 +30,34 @@ As capturas abaixo apresentam a página na ordem em que o conteúdo aparece, do 
 
 ![Planos de assinatura e rodapé](assets/screenshot3.png)
 
-## Como rodar
-- Basta abrir o `index.html` no navegador — não há dependências ou build necessário.
-- O JavaScript utilizado está em `scripts/main.js` e é carregado diretamente pelo HTML.
-- Ou [clicar neste link](https://jpfreitas-dev.github.io/subscription-club/)
+## Tecnologias utilizadas
 
-## Estrutura
+- HTML5 semântico.
+- CSS3 com Flexbox, Grid, CSS Nesting e custom properties.
+- JavaScript puro para interações visuais e revelação de conteúdo durante a rolagem.
+- Intersection Observer API.
+- GitHub Pages para publicação da demonstração.
 
+## Como executar localmente
+
+Não há dependências ou processo de build. Basta clonar o repositório e abrir o arquivo `index.html` no navegador:
+
+```bash
+git clone https://github.com/jpfreitas-dev/subscription-club.git
+cd subscription-club
 ```
+
+Depois, abra o `index.html` diretamente ou use uma extensão de servidor local, como o Live Server.
+
+## Deploy
+
+A versão publicada está disponível no GitHub Pages:
+
+https://jpfreitas-dev.github.io/subscription-club/
+
+## Estrutura do projeto
+
+```text
 ├── index.html
 ├── scripts/
 │   └── main.js             # interações visuais e revelação por rolagem
@@ -59,10 +65,13 @@ As capturas abaixo apresentam a página na ordem em que o conteúdo aparece, do 
 │   ├── background/
 │   ├── book-kit/
 │   ├── footer/
-│   └── mystery-images/
+│   ├── mystery-images/
+│   ├── screenshot1.png     # captura do hero
+│   ├── screenshot2.png     # captura do kit mensal
+│   └── screenshot3.png     # captura dos planos e rodapé
 └── styles/
-    ├── index.css        # imports
-    ├── global.css       # reset, variáveis e estilos base
+    ├── index.css           # imports dos estilos
+    ├── global.css          # reset, variáveis e estilos base
     ├── hero.css
     ├── book-kit.css
     ├── pricing.css
@@ -75,6 +84,20 @@ Concluído como landing page estática de estudo, com responsividade, animaçõe
 
 ## Limitações
 
-- Os botões de assinatura ainda não possuem checkout ou integração com pagamentos.
+- Os botões de assinatura não possuem checkout ou integração com pagamentos.
 - Os links de conteúdo, suporte e redes sociais são demonstrativos.
 - O projeto não possui backend, autenticação ou persistência de dados.
+
+## Próximos passos
+
+- Revisar continuamente o comportamento visual em diferentes navegadores.
+- Refinar detalhes de acessibilidade conforme novas revisões do projeto.
+- Evoluir a apresentação visual caso novos fluxos sejam adicionados.
+
+## Aprendizados
+
+- Organização de uma landing page em HTML, CSS e JavaScript sem dependências externas.
+- Criação de layouts responsivos com abordagem mobile-first.
+- Uso de tokens CSS para manter consistência nas animações e transições.
+- Aplicação de estados de interação para mouse, teclado e dispositivos touch.
+- Uso do Intersection Observer para revelar conteúdo conforme a rolagem.
