@@ -34,6 +34,16 @@ Projeto criado durante o curso Fullstack da [Rocketseat](https://www.rocketseat.
 - Rodapé responsivo com links e redes sociais.
 - Rolagem suave entre o botão de assinatura e os planos.
 
+## Demonstração
+
+As capturas abaixo apresentam a página na ordem em que o conteúdo aparece, do topo ao final:
+
+![Hero e apresentação do clube](assets/screenshot1.png)
+
+![Kit mensal](assets/screenshot2.png)
+
+![Planos de assinatura e rodapé](assets/screenshot3.png)
+
 ## Como rodar
 - Basta abrir o `index.html` no navegador — não há dependências ou build necessário.
 - O JavaScript utilizado está em `scripts/main.js` e é carregado diretamente pelo HTML.
@@ -68,4 +78,3 @@ Concluído como landing page estática de estudo, com responsividade, animaçõe
 - Os botões de assinatura ainda não possuem checkout ou integração com pagamentos.
 - Os links de conteúdo, suporte e redes sociais são demonstrativos.
 - O projeto não possui backend, autenticação ou persistência de dados.
-- As imagens de apresentação podem ser adicionadas posteriormente ao diretório `assets/` após novas capturas do navegador.
