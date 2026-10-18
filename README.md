@@ -2,8 +2,6 @@
 
 Landing page responsiva para um clube de assinatura de livros, criada para apresentar a proposta do serviço, o kit mensal e os planos disponíveis.
 
-[Demo online](https://jpfreitas-dev.github.io/subscription-club/)
-
 ## Sobre o projeto
 
 O Encantos Literários é uma landing page estática com identidade visual inspirada em fantasia e literatura. O projeto foi desenvolvido para praticar estruturação semântica, responsividade, animações CSS e interações visuais leves no navegador.
