@@ -157,10 +157,16 @@ section.book-kit {
         opacity: 0;
         scale: 0;
         translate: var(--offset-x) var(--offset-y);
-        transition: opacity 0.5s ease, scale 0.5s ease, translate 0.8s cubic-bezier(0.34, 1.4, 0.64, 1);
+        transition: opacity var(--motion-base) var(--ease-standard), scale var(--motion-base) var(--ease-standard), translate var(--motion-slow) var(--ease-bounce);
       }
 
       &:hover .kit-item {
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+      }
+
+      &.is-active .kit-item {
         opacity: 1;
         scale: 1;
         translate: 0 0;

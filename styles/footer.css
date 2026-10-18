@@ -56,9 +56,11 @@ footer {
           min-height: 2rem;
           display: flex;
           align-items: center;
+          transition: color var(--motion-fast) var(--ease-standard), translate var(--motion-fast) var(--ease-standard);
 
           &:hover {
             color: var(--text-body);
+            translate: 0.25rem 0;
           }
         }
       }
