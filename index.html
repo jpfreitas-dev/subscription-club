@@ -46,33 +46,33 @@
   </section>
 
   <main>
-    <section class="book-kit" aria-labelledby="kit-title">
+    <section class="book-kit reveal" aria-labelledby="kit-title">
       <div class="title">
         <img src="assets/star-pink.svg" alt="" role="presentation">
         <h3 id="kit-title">Conheça o kit mensal</h3>
         <img src="assets/star-pink.svg" alt="" role="presentation">
       </div>
       <p>Recebe uma caixa surpresa todos os meses</p>
-      <div class="kit">
-        <img src="assets/book-kit/example-book.png" alt="Livro: O Castelo Da Colina">
+      <div class="kit" tabindex="0" role="button" aria-label="Mostrar detalhes do kit mensal">
+        <img src="assets/book-kit/example-book.png" alt="Livro: O Castelo Da Colina" loading="lazy">
 
         <span class="kit-item">Livro em capa dura</span>
         <img src="assets/book-kit/arrow1.svg" alt="" role="presentation" class="kit-item">
 
         <span class="kit-item">Broche exclusivo</span>
         <img src="assets/book-kit/arrow2.svg" alt="" role="presentation" class="kit-item">
-        <img src="assets/book-kit/pin.svg" alt="Broche decorativo" class="kit-item">
+        <img src="assets/book-kit/pin.svg" alt="Broche decorativo" class="kit-item" loading="lazy">
 
         <img src="assets/book-kit/arrow3.svg" alt="" role="presentation" class="kit-item">
-        <img src="assets/book-kit/bookmark-yellow.svg" alt="Marca página amarelo" class="kit-item">
-        <img src="assets/book-kit/bookmark-purple.svg" alt="Marca página roxo" class="kit-item">
+        <img src="assets/book-kit/bookmark-yellow.svg" alt="Marca página amarelo" class="kit-item" loading="lazy">
+        <img src="assets/book-kit/bookmark-purple.svg" alt="Marca página roxo" class="kit-item" loading="lazy">
         <span class="kit-item">Marca páginas temático</span>
 
         <div class="elipse-blur" aria-hidden="true"></div>
       </div>
     </section>
 
-    <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+    <section class="pricing reveal" id="pricing" aria-labelledby="pricing-title">
       <h3 id="pricing-title">Assinatura <br> Encantos Literários</h3>
 
       <div class="signatures">
@@ -169,7 +169,7 @@
     </section>
   </main>
 
-  <footer aria-label="Rodapé">
+  <footer class="reveal" aria-label="Rodapé">
     <div class="links">
       <div class="brand">
         <img src="assets/logo-horizontal.svg" alt="Encantos Literários">
@@ -201,6 +201,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="scripts/main.js" defer></script>
 </body>
 
 </html>
