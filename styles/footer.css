@@ -44,6 +44,7 @@ footer {
       display: grid;
       grid-auto-flow: column;
       gap: 1.5rem;
+      min-width: 0;
 
       & nav {
         & h4 {
@@ -52,6 +53,9 @@ footer {
 
         & a {
           margin-bottom: .75rem;
+          min-height: 2rem;
+          display: flex;
+          align-items: center;
 
           &:hover {
             color: var(--text-body);

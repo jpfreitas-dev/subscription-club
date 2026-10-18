@@ -19,10 +19,13 @@ section.pricing {
     gap: 1.5rem;
     width: 100%;
     overflow: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
     scrollbar-width: none;
 
     & .card {
-      width: 17rem;
+      width: min(17rem, calc(100vw - 4rem));
+      min-width: min(17rem, calc(100vw - 4rem));
       height: 25rem;
       padding: 2rem 2rem 1.75rem;
       background-color: var(--shape-base);
@@ -31,6 +34,7 @@ section.pricing {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      scroll-snap-align: center;
 
       & header {
 
@@ -146,6 +150,10 @@ section.pricing {
 @media (width >=48rem) {
   section.pricing {
     padding-block: 4rem;
+
+    & .signatures {
+      padding-inline: 2rem;
+    }
   }
 }
 
